@@ -1,0 +1,178 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 2,
+
+    "modules-left": ["custom/arch-logo", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/temperature","wireplumber", "battery", "hyprland/language", "custom/wifi", "bluetooth", "custom/power" ],
+
+   "custom/arch-logo": {
+      "format": " ",
+      "tooltip": false,
+	  "on-click": "~/.config/waybar/scripts/app-menu.sh",
+    },
+	
+    "hyprland/workspaces": {
+        "format": "<span size='larger'>{icon}</span>",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "\uf444",
+            "default": "\uf4c3"
+        },
+        "icon-size": 10,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+        }
+    },
+
+	"hyprland/window": {
+    "swap-icon-label": false,
+    "format": "{}",
+    "tooltip": false,
+	"max-length": 30,
+    "min-length": 5,
+
+    "rewrite": {
+      // ────────────────────────────────────────────────────────── desktop ───
+      "": 
+        "<span foreground='#8aadf4'> </span> Hyprland",
+
+      // ───────────────────────────────────────────────────────── terminal ───
+
+      "~": "  Terminal",
+      "kitty": "  Terminal",
+
+      // ────────────────────────────────────────────────────────── browser ───
+
+      "(.*)Mozilla Firefox": 
+        "<span foreground='#ed8796'>󰈹 </span> Firefox",
+      "(.*) — Mozilla Firefox": 
+        "<span foreground='#ed8796'>󰈹 </span> $1",
+
+      // ────────────────────────────────────────────────────── development ───
+
+      "(.*) - Visual Studio Code": 
+        "<span foreground='#8aadf4'>󰨞 </span> $1",
+      "(.*)Visual Studio Code": 
+        "<span foreground='#8aadf4'>󰨞 </span> Visual Studio Code",
+
+      "nvim": 
+        "<span foreground='#a6da95'> </span> Neovim",
+      "nvim (.*)": 
+        "<span foreground='#a6da95'> </span> $1",
+
+      "vim": 
+        "<span foreground='#a6da95'> </span> Vim",
+      "vim (.*)": 
+        "<span foreground='#a6da95'> </span> $1",
+
+      // ─────────────────────────────────────────────────────────── social ───
+
+      "• Discord(.*)": "Discord$1",
+      "(.*)Discord(.*)": 
+        "<span foreground='#8aadf4'> </span> $1Discord$2",
+
+      "vesktop": 
+        "<span foreground='#8aadf4'> </span> Discord",
+		
+	 "• Telegram(.*)": "Telegram$1",
+      "(.*)Telegram(.*)": 
+        "<span foreground='#8aadf4'></span> $1Telegram$2",
+
+      "vesktop": 
+        "<span foreground='#8aadf4'> </span> Telegram",
+	
+
+      // ─────────────────────────────────────────────────────────── system ───
+      "Authenticate": "  Authenticate"
+    }
+  },
+
+
+    "clock": {
+		"tooltip": false,
+        "format": "󰸗  {:%d.%m.%Y | %H:%M}  "
+    },
+
+    "wireplumber": {
+        "format": "\udb81\udd7e  {volume}%",
+        "max-volume": 100,
+        "scroll-step": 5
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "format": "{icon}  {capacity}%",
+        "format-icons": [
+			"<span color='#ccccee'></span>",//cc421e
+			"<span color='#ccccee'></span>",//cc421e
+			"<span color='#ccccee'></span>",//cc7755
+			"<span color='#ccccee'></span>",//ffffa5
+			"<span color='#ccccee'></span>"//36cc61
+		],
+    },
+
+    "custom/temperature": {
+		"exec": "~/.config/waybar/scripts/cpu-temp.sh",
+		"return-type": "json",
+		"format": "{}",
+		"interval": 5,
+		"min-length": 8,
+		"max-length": 8
+    },
+
+    "custom/wifi": {
+		"exec": "~/.config/waybar/scripts/wifi-status.sh",
+		"return-type": "json",
+		"format": "{}",
+		"on-click": "~/.config/waybar/scripts/wifi-on-off.sh",
+		"interval": 1,
+		"min-length": 1,
+		"max-length": 1
+	 },		
+
+    "bluetooth": {
+		"format": "󰂰",
+		"format-disabled": "󰂲",
+		"format-connected": "󰂱",
+		"format-connected-battery": "󰂱",
+
+		"tooltip-format": 
+		  "{num_connections} connected",
+		"tooltip-format-disabled": 
+		  "Bluetooth Disabled",
+		"tooltip-format-connected": 
+		  "{device_enumerate}",
+		"tooltip-format-enumerate-connected": 
+		  "{device_alias}",
+		"tooltip-format-enumerate-connected-battery": 
+		  ":: {device_alias}: 󱊣 {device_battery_percentage}%",
+
+		"interval": 1,
+		"min-length": 1,
+		"max-length": 1
+  },
+
+    "hyprland/language": {
+		"format": "  {}",
+		"format-ru": "RU",
+		"format-en": "US"
+},
+
+    "custom/power": {
+		"format": " ",
+		"tooltip": false,
+		// "tooltip-format": "Power Menu",
+		"on-click": "~/.config/waybar/scripts/power-menu.sh"
+    },
+	
+    
+}

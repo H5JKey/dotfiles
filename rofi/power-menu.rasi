@@ -1,0 +1,50 @@
+/* Power menu */
+
+* {
+  /* Основные цвета */
+  main-bg:        rgba(40,40,60,0.6);
+  selected-bg:    rgba(40,40,60,0.6);
+  main-fg:        #ccccee;
+  main-br:        #666699;
+
+  alternate-normal-background: @main-bg;
+  background:                  @main-bg;
+  foreground:                  @main-fg;
+  selected-background:         @selected-bg;
+  selected-normal-background:  @selected-bg;
+
+}
+
+
+configuration {
+  font:                     "JetBrainsMono Nerd Font Bold 14";
+  hover-select:             true;
+  me-select-entry:          "MousePrimary";
+  me-accept-entry:          "!MousePrimary";
+}
+
+/* Window */
+
+window {
+  location:                 center;
+  anchor:                   center;
+  width:                    170px;
+  border:                   1px;
+  border-radius:            15px;
+  border-color:             @main-br;
+  children:                 [ mainbox ];
+}
+
+mainbox {
+  children:                 [listview ];
+}
+
+/* List */
+
+listview {
+  border:                   none;
+  lines:                    6;
+  scrollbar: false;
+}
+
+
