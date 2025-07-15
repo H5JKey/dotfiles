@@ -1,24 +1,27 @@
-@define-color foreground #ccccee;
-@define-color foreground-inactive #aaaacc;
-@define-color main-background rgba(40,40,60,0.4);
-@define-color item-background rgba(55,55,75,0.3);
+@define-color foreground #bcc5ff; 
+@define-color main-background rgba(25, 25, 40, 0.75);
+@define-color item-background rgba(55,55,75,0.0);
 @define-color border #666699;
 
 * {
     font-family: JetBrainsMono Nerd Font;
-    font-size: 14px;
+    font-size: 13px;
 	padding: 0;
 	font-weight: bold;
 }
 
 .modules-right, .modules-left, .modules-center {
-	
+	background: @main-background;
+	border-radius: 20px;
+	border-color: @border;
+	border-width: 0.3px;
+	border-style: solid;
+	color: @foreground;
 }
 
 #waybar {
-    color: @foreground;
-    background-color: @main-background;
-	border-radius: 10px;
+	background: rgba(0,0,0,0);
+
 }
 
 
@@ -26,11 +29,6 @@
     color: @foreground;
     padding-left: 0.2em;
 	padding-right: 0.6em;
-}
-
-
-#workspaces button.empty {
-    color: @foreground-inactive;
 }
 
 
@@ -42,17 +40,25 @@
 
 #workspaces button.active {
   border-radius: 15px;
-  background: rgba(70,70,90,1);
+  background: rgb(53, 53, 77);
   text-shadow: none;
 }
 
 #custom-arch-logo {
 	font-size: 17px;
 	color: #1793d1;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	background-color: @item-background;
+}
+
+#custom-separator {
+	color: #444466;
 }
 
 #workspaces,
-#custom-arch-logo,
 #window,
 #custom-temperature,
 #clock,
@@ -67,8 +73,5 @@
 	margin-top: 3px;
 	margin-bottom: 3px;
 	background-color: @item-background;
-	border-radius: 15px;
-	border-width: 0.2px;
-	border-color: @border;
-	border-style: solid;
+	color: @foreground;
 }

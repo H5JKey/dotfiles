@@ -1,12 +1,18 @@
 {
     "layer": "top",
-    "position": "top",
+	"margin-top": "10px",
+    "position": "fixed",
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["custom/arch-logo", "hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["custom/arch-logo", "custom/separator", "hyprland/workspaces", "custom/separator", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/temperature","pulseaudio", "battery", "hyprland/language", "custom/wifi", "bluetooth", "custom/power" ],
+    "modules-right": ["custom/temperature","custom/separator", "pulseaudio", "battery", "hyprland/language","custom/separator", "custom/wifi", "bluetooth","custom/separator", "custom/power" ],
+
+   "custom/separator": {
+	  "format": "|",
+      "tooltip": false,
+   },
 
    "custom/arch-logo": {
       "format": " ",
@@ -120,11 +126,11 @@
         "interval": 60,
         "format": "{icon}  {capacity}%",
         "format-icons": [
-			"<span color='#ccccee'></span>",//cc421e
-			"<span color='#ccccee'></span>",//cc421e
-			"<span color='#ccccee'></span>",//cc7755
-			"<span color='#ccccee'></span>",//ffffa5
-			"<span color='#ccccee'></span>"//36cc61
+			"<span></span>",//cc421e
+			"<span></span>",//cc421e
+			"<span></span>",//cc7755
+			"<span></span>",//ffffa5
+			"<span></span>"//36cc61
 		],
     },
 

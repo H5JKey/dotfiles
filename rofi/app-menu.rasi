@@ -1,10 +1,9 @@
 /* Power menu */
 
 * {
-  /* Основные цвета */
-  main-bg:        rgba(40,40,60,0.6);
-  selected-bg:    rgba(40,40,60,0.6);
-  main-fg:        #ccccee;
+  main-bg:        rgba(25, 25, 40, 0.75);
+  selected-bg:    rgba(25, 25, 40, 0.75);
+  main-fg:        #bcc5ff;
   main-br:        #666699;
 
   alternate-normal-background: @main-bg;
