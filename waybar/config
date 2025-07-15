@@ -2,11 +2,11 @@
     "layer": "top",
     "position": "top",
     "height": 24,
-    "spacing": 2,
+    "spacing": 5,
 
     "modules-left": ["custom/arch-logo", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/temperature","wireplumber", "battery", "hyprland/language", "custom/wifi", "bluetooth", "custom/power" ],
+    "modules-right": ["custom/temperature","pulseaudio", "battery", "hyprland/language", "custom/wifi", "bluetooth", "custom/power" ],
 
    "custom/arch-logo": {
       "format": " ",
@@ -101,11 +101,19 @@
         "format": "󰸗  {:%d.%m.%Y | %H:%M}  "
     },
 
-    "wireplumber": {
-        "format": "\udb81\udd7e  {volume}%",
-        "max-volume": 100,
-        "scroll-step": 5
-    },
+    "pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "󰂰 {volume}%",
+		"format-muted": "󰝟  {volume}%",
+		"format-icons": {
+			"headphones": " ",
+			"phone": " ",
+			"phone-muted": " ",
+			"portable": " ",
+			"default": " "
+		},
+		"scroll-step": 1,
+	},
 
     "battery": {
         "bat": "BAT1",
