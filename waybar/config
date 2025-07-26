@@ -147,7 +147,7 @@
 		"exec": "~/.config/scripts/wifi-status.sh",
 		"return-type": "json",
 		"format": "{}",
-		"on-click": "~/.config/scripts/wifi-on-off.sh",
+		"on-click": "~/.config/scripts/wifi-menu.sh",
 		"interval": 1,
 		"min-length": 1,
 		"max-length": 1
