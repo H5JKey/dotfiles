@@ -17,7 +17,7 @@
 
 
 configuration {
-  font:                     "JetBrainsMono Nerd Font Bold 14";
+  font:                     "JetBrainsMono Nerd Font Bold 15";
   hover-select:             true;
   me-select-entry:          "MousePrimary";
   me-accept-entry:          "!MousePrimary";
@@ -30,7 +30,7 @@ window {
   anchor:                   center;
   width:                    170px;
   border:                   1px;
-  border-radius:            15px;
+  border-radius:            0px;
   border-color:             @main-br;
   children:                 [ mainbox ];
 }
@@ -42,8 +42,9 @@ mainbox {
 /* List */
 
 listview {
+  columns:                  1;
   border:                   none;
-  lines:                    6;
+  lines:                    4;
   scrollbar: false;
 }
 

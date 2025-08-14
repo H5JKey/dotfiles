@@ -2,8 +2,8 @@
 
 * {
   /* Основные цвета */
-  main-bg:        rgba(35, 35, 50, 0.65);
-  selected-bg:    rgba(35, 35, 50, 0.65);
+  main-bg:        rgba(35, 35, 50, 0.6);
+  selected-bg:    rgba(35, 35, 50, 0.6);
   main-fg:        #bcc5ff;
   main-br:        #666699;
 
@@ -30,7 +30,7 @@ window {
   anchor:                   center;
   width:                    600px;
   border:                   1px;
-  border-radius:            15px;
+  border-radius:            0px;
   border-color:             @main-br;
   children:                 [ mainbox ];
 }

@@ -31,7 +31,7 @@ window {
   location:                 center;
   anchor:                   center;
   border:                   1px;
-  border-radius:            15px;
+  border-radius:            0px;
   border-color:             @main-br;
   children:                 [ mainbox ];
 }
