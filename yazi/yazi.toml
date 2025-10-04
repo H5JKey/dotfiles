@@ -2,4 +2,3 @@
 edit = [
 	{ run = 'code "$@"', orphan = true },
 ]
-

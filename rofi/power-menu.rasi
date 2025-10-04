@@ -2,8 +2,8 @@
 
 * {
   /* Основные цвета */
-  main-bg:        rgba(35, 35, 50, 0.65);
-  selected-bg:    rgba(35, 35, 50, 0.65);
+  main-bg:        rgba(35, 35, 50, 0.45);
+  selected-bg:    rgba(35, 35, 50, 0.45);
   main-fg:        #bcc5ff;
   main-br:        #666699;
 

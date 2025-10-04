@@ -194,7 +194,10 @@
 		"tooltip": false,
 		// "tooltip-format": "Power Menu",
 		"on-click": "~/.config/scripts/power-menu.sh"
-    },
+},
+
+    "tray": {
+}
 	
     
 }
